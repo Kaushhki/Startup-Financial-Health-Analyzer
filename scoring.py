@@ -36,11 +36,8 @@ def _score_margin(avg_gross_margin: float) -> float:
 
 
 def _score_burn_efficiency(avg_burn_multiple: float) -> float:
-    """
-    Burn multiple: net burn / net new revenue. Lower is better.
-    <=1x -> 100 pts, >=5x -> 0 pts. Negative (shrinking burn while growing)
-    is capped at 100. NaN (e.g. no growth to divide by) -> neutral 50.
-    """
+   
+
     if avg_burn_multiple is None or (isinstance(avg_burn_multiple, float) and math.isnan(avg_burn_multiple)):
         return 50.0
     if avg_burn_multiple <= 1:
