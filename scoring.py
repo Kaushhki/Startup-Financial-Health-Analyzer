@@ -1,10 +1,5 @@
-"""
-Turns raw metrics into a single 0-100 Health Score with a letter grade
-and a breakdown so users can see exactly why they got the score they did.
 
-Weights and thresholds are intentionally simple and documented so they're
-easy to defend, tune, or cite in a portfolio write-up.
-"""
+
 
 import math
 
