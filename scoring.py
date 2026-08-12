@@ -19,10 +19,8 @@ def _score_runway(runway_months: float) -> float:
 
 
 def _score_growth(avg_mom_growth: float) -> float:
-    """
-    0 pts at -10% MoM or worse, 100 pts at +15% MoM or better.
-    Linear in between. NaN (e.g. only 1 month of data) -> neutral 50.
-    """
+   
+
     if avg_mom_growth is None or (isinstance(avg_mom_growth, float) and math.isnan(avg_mom_growth)):
         return 50.0
     lo, hi = -0.10, 0.15
