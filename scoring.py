@@ -12,7 +12,7 @@ WEIGHTS = {
 
 
 def _score_runway(runway_months: float) -> float:
-    """0 pts at 0 months, 100 pts at 18+ months. Profitable = 100."""
+    
     if runway_months == float("inf"):
         return 100.0
     return max(0.0, min(100.0, (runway_months / 18.0) * 100.0))
